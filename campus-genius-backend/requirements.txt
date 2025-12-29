@@ -10,7 +10,8 @@ dj-rest-auth[with_social]
 django-allauth==0.58.2
 
 # Database
-mysqlclient==2.2.4
+pymysql==1.1.0
+cryptography==42.0.2
 dj-database-url==2.1.0
 
 # FastAPI and AI Service
