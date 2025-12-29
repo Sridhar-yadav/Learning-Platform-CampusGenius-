@@ -257,3 +257,4 @@ MONGO_DB_NAME = env('MONGO_DB_NAME', default='campus_genius_chat')
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'apps.custom_auth.serializers.CustomRegisterSerializer'
 }
+
