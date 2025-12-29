@@ -30,7 +30,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Set environment variables
 DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY', default='django-insecure-debug-key-do-not-use-in-production')
 
 # JWT Settings
 JWT_SECRET = os.getenv("JWT_SECRET")
