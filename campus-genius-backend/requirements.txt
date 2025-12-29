@@ -8,6 +8,8 @@ djangorestframework-simplejwt==5.3.1
 django-environ==0.11.2
 dj-rest-auth[with_social]
 django-allauth==0.58.2
+daphne==4.0.0
+channels==4.0.0
 
 # Database
 pymysql==1.1.0
