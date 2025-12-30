@@ -18,7 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
+from django.http import JsonResponse
+
+def home(request):
+    return JsonResponse({
+        "status": "ok", 
+        "message": "Campus Genius Backend is running",
+        "version": "1.0.0"
+    })
+
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
     
     # API Documentation

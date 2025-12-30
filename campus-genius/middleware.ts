@@ -12,6 +12,9 @@ export default withAuth(
     const isStudentPath = path.startsWith("/student")
     const isFacultyPath = path.startsWith("/faculty")
 
+    console.log(`[MIDDLEWARE] Path: ${path}, Token: ${token ? 'YES' : 'NO'}, Role: ${token?.role}`);
+
+
     // 1. Unauthenticated users
     if (!token) {
       if (isAuthPath || isPublicPath) {
