@@ -178,8 +178,9 @@ export default function RegisterPage() {
       };
 
       // Direct fetch to backend
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
-      const BASE_URL = API_URL.replace(/\/api\/?$/, "").replace(/\/$/, "");
+      const rawApiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+      const API_URL = rawApiUrl.trim();
+      const BASE_URL = API_URL.replace(/\/api\/?\s*$/, "").replace(/\/$/, "");
       const registerUrl = `${BASE_URL}/auth/register/`;
 
       console.log("Registering at:", registerUrl);
